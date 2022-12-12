@@ -130,7 +130,14 @@ export default {
         </section>
 
         <section class="bottom">
+            <a href="#">
+                SIGN-UP NOW!
+            </a>
 
+            <div>
+                <span>FOLLOW US</span>
+                <!-- ICONS -->
+            </div>
         </section>
     </footer>
 </template>
@@ -144,7 +151,10 @@ footer {
 
 .top {
     background-image: url("./src/assets/img/footer-bg.jpg");
-    padding: 30px 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 250px;
+    height: calc(100% - 90px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -158,20 +168,28 @@ footer {
     color: white
 }
 
+.left ul {
+    font-size: 10px;
+}
+
 .right img {
     width: 30%;
     position: absolute;
     top: -80px;
-    right: 280px;
+    right: 250px;
     z-index: 1;
 }
 
 .bottom {
     background-color: #303030;
     width: 100%;
-    height: 120px;
+    height: 90px;
+    padding: 0 250px;
     position: relative;
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 }
 </style>
