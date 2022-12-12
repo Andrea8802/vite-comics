@@ -4,7 +4,58 @@ export default {
     name: "Header",
     data() {
         return {
-            logoImage: "./src/assets/img/dc-logo.png"
+            logoImage: "./src/assets/img/dc-logo.png",
+            navItems: [
+                {
+                    name: "CHARACTERS",
+                    active: true
+                },
+
+                {
+                    name: "COMICS",
+                    active: false
+                },
+
+                {
+                    name: "MOVIES",
+                    active: false
+                },
+
+                {
+                    name: "TV",
+                    active: false
+                },
+
+                {
+                    name: "GAMES",
+                    active: false
+                },
+
+                {
+                    name: "COLLECTIBLES",
+                    active: false
+                },
+
+                {
+                    name: "VIDEOS",
+                    active: false
+                },
+
+                {
+                    name: "FANS",
+                    active: false
+                },
+
+                {
+                    name: "NEWS",
+                    active: false
+                },
+
+                {
+                    name: "SHOP",
+                    active: false
+                },
+            ]
         }
     }
 }
@@ -15,48 +66,8 @@ export default {
     <header>
         <img :src="logoImage" alt="">
         <ul>
-            <li>
-                AAA
-            </li>
-
-            <li>
-                AAA
-            </li>
-
-            <li>
-                AAA
-            </li>
-
-            <li>
-                AAA
-            </li>
-
-            <li>
-                AAA
-            </li>
-
-            <li>
-                AAA
-            </li>
-
-            <li>
-                AAA
-            </li>
-
-            <li>
-                AAA
-            </li>
-
-            <li>
-                AAA
-            </li>
-
-            <li>
-                AAA
-            </li>
-
-            <li>
-                AAA
+            <li v-for="item in navItems" :class="{ itemSelected: item.active }">
+                {{ item.name }}
             </li>
         </ul>
     </header>
@@ -82,6 +93,8 @@ header ul {
     display: flex;
     justify-content: space-evenly;
     align-self: center;
-    gap: 30px;
+    gap: 20px;
+    font-size: 10px;
+    font-weight: bold;
 }
 </style>

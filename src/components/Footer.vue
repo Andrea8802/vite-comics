@@ -164,12 +164,19 @@ footer {
     display: flex;
     flex-wrap: wrap;
     width: 25%;
-    gap: 30px;
-    color: white
+    column-gap: 30px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .left ul {
     font-size: 10px;
+    color: gray;
+}
+
+.left ul li {
+    margin: 3px 0;
 }
 
 .right img {
