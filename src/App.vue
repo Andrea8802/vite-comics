@@ -24,18 +24,7 @@ export default {
   <Footer />
 </template>
 
-<style>
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-ul {
-  list-style: none;
-}
+<style lang="scss">
+@use "./assets/styles/general.scss" as *;
+@use "./assets/styles/partials/mixins.scss" as *;
 </style>

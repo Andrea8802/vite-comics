@@ -77,50 +77,52 @@ export default {
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use "../assets/styles/partials/variables.scss" as *;
+@use "../assets/styles/partials/mixins.scss" as *;
+
+
 .itemSelected {
-    border-bottom: 5px solid #0282f9;
-}
+    border-bottom: 5px solid $primary-color;
 
-.itemSelected>a {
-    color: #0282f9;
-}
+    a {
+        color: $primary-color;
 
-.itemSelected:hover {
-    border: none;
+    }
+
+    &:hover {
+        border: none;
+    }
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include d-flex (between);
     height: 100px;
     width: 100%;
     padding: 0 260px;
-}
 
-header img {
-    height: 65%;
-}
+    img {
+        height: 65%;
+    }
 
-header ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-self: center;
-    gap: 20px;
-}
+    ul {
+        @include d-flex (evenly);
+        gap: 20px;
 
-header li a {
-    padding: 42px 0;
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-    font-size: 10px;
-    font-weight: bold;
-}
+        li a {
+            padding: 42px 0;
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+            font-size: 10px;
+            font-weight: bold;
 
-header li a:hover {
-    border-bottom: 5px solid #0282f9;
-    color: #0282f9;
+            &:hover {
+                border-bottom: 5px solid $primary-color;
+                color: $primary-color;
+            }
+        }
+    }
+
 }
 </style>

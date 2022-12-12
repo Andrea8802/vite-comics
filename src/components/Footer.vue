@@ -144,108 +144,105 @@ export default {
     </footer>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use "../assets/styles/partials/variables.scss" as *;
+@use "../assets/styles/partials/mixins.scss" as *;
+
+
 footer {
     width: 100%;
     height: calc(100vh - 320px);
     position: relative;
-}
 
-.top {
-    background-image: url("./src/assets/img/footer-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 80px 250px;
-    height: calc(100% - 90px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .top {
+        background-image: url("./src/assets/img/footer-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 80px 250px;
+        height: calc(100% - 90px);
+        @include d-flex (between);
 
-.left {
-    display: flex;
-    flex-wrap: wrap;
-    width: 40%;
-    column-gap: 30px;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-}
+        .left {
+            display: flex;
+            flex-wrap: wrap;
+            width: 40%;
+            column-gap: 30px;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
 
-.left ul {
-    font-size: 10px;
-    margin: 10px 0 20px;
-}
+            ul {
+                font-size: 10px;
+                margin: 10px 0 20px;
 
-.left ul li {
-    margin: 4px 0;
-}
+                li {
+                    margin: 4px 0;
 
-.left ul li a {
-    text-decoration: none;
-    color: gray;
+                    a {
+                        text-decoration: none;
+                        color: gray;
 
-}
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
 
-.left ul li a:hover {
-    text-decoration: underline;
-}
+        .right img {
+            width: 30%;
+            position: absolute;
+            top: -80px;
+            right: 250px;
+            z-index: 1;
+        }
+    }
 
-.right img {
-    width: 30%;
-    position: absolute;
-    top: -80px;
-    right: 250px;
-    z-index: 1;
-}
+    .bottom {
+        background-color: #303030;
+        width: 100%;
+        height: 90px;
+        padding: 0 250px;
+        position: relative;
+        z-index: 2;
+        @include d-flex (between);
 
-.bottom {
-    background-color: #303030;
-    width: 100%;
-    height: 90px;
-    padding: 0 250px;
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+        a {
+            border: 2px solid $primary-color;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
 
-}
+            &:hover {
+                background-color: $primary-color;
+            }
+        }
 
-.bottom a {
-    border: 2px solid #0282f9;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-}
+        .follow {
+            @include d-flex (center);
+            height: 100%;
 
-.bottom a:hover {
-    background-color: #0282f9;
-}
+            span {
+                color: $primary-color;
+                font-weight: bold;
+                margin-right: 15px;
+            }
 
-.bottom .follow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
+            img {
+                margin: 0 7px;
+                height: 30%;
+                cursor: pointer;
 
-.bottom .follow span {
-    color: #0282f9;
-    font-weight: bold;
-    margin-right: 15px;
-}
+                &:hover {
+                    filter: brightness(2);
+                }
+            }
+        }
 
-.bottom .follow img {
-    margin: 0 7px;
-    height: 30%;
-    cursor: pointer;
-}
+    }
 
-
-.bottom .follow img:hover {
-    filter: brightness(2);
 }
 </style>

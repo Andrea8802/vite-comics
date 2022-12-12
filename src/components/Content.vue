@@ -16,7 +16,11 @@ export default {
     </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use "../assets/styles/partials/variables.scss" as *;
+@use "../assets/styles/partials/mixins.scss" as *;
+
+
 section {
     background-color: #1c1c1c;
     height: 100px;

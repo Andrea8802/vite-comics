@@ -45,35 +45,35 @@ export default {
     </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use "../assets/styles/partials/variables.scss" as *;
+@use "../assets/styles/partials/mixins.scss" as *;
+
+
 section {
-    background-color: #0282f9;
+    background-color: $primary-color;
     height: 120px;
     width: 100%;
     color: white;
     padding: 0 220px;
     position: relative;
     z-index: 2;
-}
 
-ul {
-    height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
+    ul {
+        height: 100%;
+        @include d-flex (evenly);
 
-li {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-size: 10px;
-}
+        li {
+            height: 100%;
+            @include d-flex (center);
+            gap: 10px;
+            font-size: 10px;
 
-ul li img {
-    height: 35%;
-    max-width: 30%;
+            img {
+                height: 35%;
+                max-width: 30%;
+            }
+        }
+    }
 }
 </style>
