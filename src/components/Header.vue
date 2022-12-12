@@ -1,10 +1,10 @@
 <script>
 
 export default {
-    name: "header",
+    name: "Header",
     data() {
         return {
-            logoImage: "src/assets/img/dc-logo.png"
+            logoImage: "./src/assets/img/dc-logo.png"
         }
     }
 }
@@ -69,15 +69,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* DEBUG */
-    background-color: red;
     height: 100px;
     width: 100%;
     padding: 0 260px;
 }
 
 header img {
-    height: 60%;
+    height: 65%;
 }
 
 header ul {
@@ -85,6 +83,5 @@ header ul {
     justify-content: space-evenly;
     align-self: center;
     gap: 30px;
-    list-style: none;
 }
 </style>
