@@ -13,6 +13,14 @@ export default {
   <Header />
 </template>
 
-<style lang="scss">
-@use "./assets/styles/general.scss" as *;
+<style>
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 </style>
