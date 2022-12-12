@@ -3,7 +3,54 @@ export default {
     name: "Footer",
     data() {
         return {
-            logoImageBg: "./src/assets/img/dc-logo-bg.png"
+            logoImageBg: "./src/assets/img/dc-logo-bg.png",
+            linkFooter: {
+
+                dcComics: [
+                    "Characters",
+                    "Comics",
+                    "Movies",
+                    "TV",
+                    "Games",
+                    "Videos",
+                    "News"
+                ],
+
+
+
+                dC: [
+                    "Term Of Use",
+                    "Privacy policy (New)",
+                    "Ad Choices",
+                    "Advertising",
+                    "Jobs",
+                    "Subscriptions",
+                    "Talent Workshops",
+                    "CPSC Certificates",
+                    "Ratings",
+                    "Shop Help",
+                    "Contact US"
+                ],
+
+
+
+                sites: [
+                    "DC",
+                    "MAD Magazine",
+                    "DC Kids",
+                    "DC Universe",
+                    "DC Power Visa"
+                ],
+
+
+
+                shop: [
+                    "Shop DC",
+                    "Shop DC Collectibles"
+                ]
+
+
+            }
         }
     }
 }
@@ -16,26 +63,10 @@ export default {
                 <div class="list">
                     DC COMICS
                     <ul>
-                        <li>
-                            CCC
-                        </li>
-                        <li>
-                            CCC
-                        </li>
-                        <li>
-                            CCC
-                        </li>
-                        <li>
-                            CCC
-                        </li>
-                        <li>
-                            CCC
-                        </li>
-                        <li>
-                            CCC
-                        </li>
-                        <li>
-                            CCC
+                        <li v-for="link in linkFooter.dcComics">
+                            <a href="#">
+                                {{ link }}
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -43,48 +74,10 @@ export default {
                 <div class="list">
                     DC
                     <ul>
-                        <li>
-                            DDD
-                        </li>
-
-                        <li>
-                            DDD
-                        </li>
-
-                        <li>
-                            DDD
-                        </li>
-
-                        <li>
-                            DDD
-                        </li>
-
-                        <li>
-                            DDD
-                        </li>
-
-                        <li>
-                            DDD
-                        </li>
-
-                        <li>
-                            DDD
-                        </li>
-
-                        <li>
-                            DDD
-                        </li>
-
-                        <li>
-                            DDD
-                        </li>
-
-                        <li>
-                            DDD
-                        </li>
-
-                        <li>
-                            DDD
+                        <li v-for="link in linkFooter.dC">
+                            <a href="#">
+                                {{ link }}
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -92,20 +85,10 @@ export default {
                 <div class="list">
                     SITES
                     <ul>
-                        <li>
-                            CCC
-                        </li>
-                        <li>
-                            CCC
-                        </li>
-                        <li>
-                            CCC
-                        </li>
-                        <li>
-                            CCC
-                        </li>
-                        <li>
-                            CCC
+                        <li v-for="link in linkFooter.sites">
+                            <a href="#">
+                                {{ link }}
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -114,11 +97,10 @@ export default {
                 <div class="list">
                     SHOP
                     <ul>
-                        <li>
-                            CCC
-                        </li>
-                        <li>
-                            CCC
+                        <li v-for="link in linkFooter.shop">
+                            <a href="#">
+                                {{ link }}
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -163,7 +145,7 @@ footer {
 .left {
     display: flex;
     flex-wrap: wrap;
-    width: 25%;
+    width: 40%;
     column-gap: 30px;
     color: white;
     font-size: 14px;
@@ -172,11 +154,16 @@ footer {
 
 .left ul {
     font-size: 10px;
-    color: gray;
 }
 
 .left ul li {
-    margin: 3px 0;
+    margin: 4px 0;
+}
+
+.left ul li a {
+    text-decoration: none;
+    color: gray;
+
 }
 
 .right img {
