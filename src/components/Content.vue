@@ -25,5 +25,7 @@ section {
     display: flex;
     align-items: center;
     padding: 0 250px;
+    font-weight: bold;
+    font-size: 24px;
 }
 </style>

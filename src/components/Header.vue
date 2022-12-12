@@ -67,7 +67,9 @@ export default {
         <img :src="logoImage" alt="">
         <ul>
             <li v-for="item in navItems" :class="{ itemSelected: item.active }">
-                {{ item.name }}
+                <a href="#">
+                    {{ item.name }}
+                </a>
             </li>
         </ul>
     </header>
@@ -76,6 +78,18 @@ export default {
 </template>
 
 <style scoped>
+.itemSelected {
+    border-bottom: 5px solid #0282f9;
+}
+
+.itemSelected>a {
+    color: #0282f9;
+}
+
+.itemSelected:hover {
+    border: none;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -94,7 +108,19 @@ header ul {
     justify-content: space-evenly;
     align-self: center;
     gap: 20px;
+}
+
+header li a {
+    padding: 42px 0;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
     font-size: 10px;
     font-weight: bold;
+}
+
+header li a:hover {
+    border-bottom: 5px solid #0282f9;
+    color: #0282f9;
 }
 </style>

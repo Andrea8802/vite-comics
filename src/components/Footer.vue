@@ -50,7 +50,29 @@ export default {
                 ]
 
 
-            }
+            },
+
+            iconsSocial: [
+                {
+                    name: "facebook.png"
+                },
+
+                {
+                    name: "twitter.png"
+                },
+
+                {
+                    name: "youtube.png"
+                },
+
+                {
+                    name: "facebook.png"
+                },
+
+                {
+                    name: "periscope.png"
+                },
+            ]
         }
     }
 }
@@ -64,6 +86,14 @@ export default {
                     DC COMICS
                     <ul>
                         <li v-for="link in linkFooter.dcComics">
+                            <a href="#">
+                                {{ link }}
+                            </a>
+                        </li>
+                    </ul>
+                    SHOP
+                    <ul>
+                        <li v-for="link in linkFooter.shop">
                             <a href="#">
                                 {{ link }}
                             </a>
@@ -93,17 +123,7 @@ export default {
                     </ul>
                 </div>
 
-                <!-- A CAPO -->
-                <div class="list">
-                    SHOP
-                    <ul>
-                        <li v-for="link in linkFooter.shop">
-                            <a href="#">
-                                {{ link }}
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+
             </div>
 
             <div class="right">
@@ -116,9 +136,9 @@ export default {
                 SIGN-UP NOW!
             </a>
 
-            <div>
+            <div class="follow">
                 <span>FOLLOW US</span>
-                <!-- ICONS -->
+                <img v-for="icon in iconsSocial" :src="'./src/assets/img/footer-' + icon.name" alt="">
             </div>
         </section>
     </footer>
@@ -154,6 +174,7 @@ footer {
 
 .left ul {
     font-size: 10px;
+    margin: 10px 0 20px;
 }
 
 .left ul li {
@@ -164,6 +185,10 @@ footer {
     text-decoration: none;
     color: gray;
 
+}
+
+.left ul li a:hover {
+    text-decoration: underline;
 }
 
 .right img {
@@ -185,5 +210,42 @@ footer {
     justify-content: space-between;
     align-items: center;
 
+}
+
+.bottom a {
+    border: 2px solid #0282f9;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.bottom a:hover {
+    background-color: #0282f9;
+}
+
+.bottom .follow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.bottom .follow span {
+    color: #0282f9;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.bottom .follow img {
+    margin: 0 7px;
+    height: 30%;
+    cursor: pointer;
+}
+
+
+.bottom .follow img:hover {
+    filter: brightness(2);
 }
 </style>
