@@ -37,7 +37,7 @@ export default {
 <template>
     <section>
         <ul>
-            <li v-for="item in blueBarContent">
+            <li v-for="(item, index) in blueBarContent" :key="index">
                 <img :src="'./src/assets/img/' + item.image" alt="">
                 <span>
                     {{ item.name }}

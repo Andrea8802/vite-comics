@@ -5,23 +5,22 @@ export default {
     name: "Content",
     components: {
         ListCard
-    },
-
-    data() {
-        return {
-
-        }
     }
 }
 </script>
 
 <template>
-    <div class="jumbotron">
-
-    </div>
+    <div class="jumbotron"></div>
     <section>
         <ListCard />
+        <div class="load">
+            <button>
+                LOAD MORE
+            </button>
+        </div>
     </section>
+
+
 </template>
 
 <style lang="scss" scoped>
@@ -39,9 +38,19 @@ section {
     min-height: 100px;
     width: 100%;
     color: white;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    font-size: 24px;
+
+    .load {
+        @include d-flex(center);
+
+        button {
+            background-color: $primary-color;
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 30px;
+            margin-bottom: 30px;
+        }
+    }
+
 }
 </style>

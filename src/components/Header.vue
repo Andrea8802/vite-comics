@@ -76,7 +76,7 @@ export default {
     <header>
         <img :src="logoImage" alt="">
         <ul>
-            <li v-for="item in navItems" :class="{ itemSelected: item.active }">
+            <li v-for="(item, n) in navItems" :class="{ itemSelected: item.active }" :key="n">
                 <a href="#">
                     {{ item.name }}
                 </a>
