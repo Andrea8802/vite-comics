@@ -1,6 +1,12 @@
 <script>
+import ListCard from '../components/ListCard.vue'
+
 export default {
     name: "Content",
+    components: {
+        ListCard
+    },
+
     data() {
         return {
 
@@ -10,9 +16,11 @@ export default {
 </script>
 
 <template>
+    <div class="jumbotron">
+
+    </div>
     <section>
-        <!-- DEBUG -->
-        -- Content goes here --
+        <ListCard />
     </section>
 </template>
 
@@ -20,15 +28,19 @@ export default {
 @use "../assets/styles/partials/variables.scss" as *;
 @use "../assets/styles/partials/mixins.scss" as *;
 
+.jumbotron {
+    background-image: url("../assets/img/jumbotron.jpg");
+    background-size: cover;
+    height: 300px;
+}
 
 section {
     background-color: #1c1c1c;
-    height: 100px;
+    min-height: 100px;
     width: 100%;
     color: white;
     display: flex;
     align-items: center;
-    padding: 0 250px;
     font-weight: bold;
     font-size: 24px;
 }

@@ -8,52 +8,62 @@ export default {
             navItems: [
                 {
                     name: "CHARACTERS",
-                    active: true
+                    active: true,
+                    link: "#"
                 },
 
                 {
                     name: "COMICS",
-                    active: false
+                    active: false,
+                    link: "#"
                 },
 
                 {
                     name: "MOVIES",
-                    active: false
+                    active: false,
+                    link: "#"
                 },
 
                 {
                     name: "TV",
-                    active: false
+                    active: false,
+                    link: "#"
                 },
 
                 {
                     name: "GAMES",
-                    active: false
+                    active: false,
+                    link: "#"
                 },
 
                 {
                     name: "COLLECTIBLES",
-                    active: false
+                    active: false,
+                    link: "#"
                 },
 
                 {
                     name: "VIDEOS",
-                    active: false
+                    active: false,
+                    link: "#"
                 },
 
                 {
                     name: "FANS",
-                    active: false
+                    active: false,
+                    link: "#"
                 },
 
                 {
                     name: "NEWS",
-                    active: false
+                    active: false,
+                    link: "#"
                 },
 
                 {
                     name: "SHOP",
-                    active: false
+                    active: false,
+                    link: "#"
                 },
             ]
         }
@@ -85,6 +95,7 @@ export default {
 .itemSelected {
     border-bottom: 5px solid $primary-color;
 
+    // Aggiungere commenti e sistemare parola attiva più alta e aggiungere container dentro tag e fav icon
     a {
         color: $primary-color;
 

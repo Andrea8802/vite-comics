@@ -5,7 +5,7 @@ import Content from './components/Content.vue'
 import Footer from './components/Footer.vue'
 
 export default {
-  name: "app",
+  name: "App",
   components: {
     Header,
     Content,
@@ -26,5 +26,4 @@ export default {
 
 <style lang="scss">
 @use "./assets/styles/general.scss" as *;
-@use "./assets/styles/partials/mixins.scss" as *;
 </style>
