@@ -18,6 +18,10 @@ export default {
                 LOAD MORE
             </button>
         </div>
+
+        <div class="title">
+            CURRENT SERIES
+        </div>
     </section>
 
 
@@ -38,6 +42,8 @@ section {
     min-height: 100px;
     width: 100%;
     color: white;
+    position: relative;
+
 
     .load {
         @include d-flex(center);
@@ -51,6 +57,20 @@ section {
             margin-bottom: 30px;
         }
     }
+
+    .title {
+        background-color: $primary-color;
+        color: white;
+        font-weight: bold;
+        padding: 12px 20px;
+        font-size: 18px;
+        position: absolute;
+        top: -25px;
+        left: 215px;
+
+    }
+
+
 
 }
 </style>
