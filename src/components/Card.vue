@@ -25,6 +25,11 @@ export default {
     img {
         max-height: 80%;
         max-width: 100%;
+        cursor: pointer;
+
+        &:hover {
+            border: 2px solid white;
+        }
     }
 
     .text {
@@ -32,6 +37,11 @@ export default {
         max-width: 100%;
         font-size: 14px;
         font-weight: normal;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 </style>

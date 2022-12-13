@@ -95,7 +95,6 @@ export default {
 .itemSelected {
     border-bottom: 5px solid $primary-color;
 
-    // Aggiungere commenti e sistemare parola attiva più alta e aggiungere container dentro tag e fav icon
     a {
         color: $primary-color;
 

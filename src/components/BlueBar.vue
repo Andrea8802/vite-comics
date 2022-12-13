@@ -39,7 +39,9 @@ export default {
         <ul>
             <li v-for="item in blueBarContent">
                 <img :src="'./src/assets/img/' + item.image" alt="">
-                {{ item.name }}
+                <span>
+                    {{ item.name }}
+                </span>
             </li>
         </ul>
     </section>
@@ -73,6 +75,15 @@ section {
                 height: 35%;
                 max-width: 30%;
             }
+
+            span {
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
         }
     }
 }
