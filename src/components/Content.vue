@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-    <section class="jumbotron"></section>
+    <div class="jumbotron"></div>
     <section>
         <ListCard />
         <div class="load">
