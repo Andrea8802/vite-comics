@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-    <div class="jumbotron"></div>
+    <section class="jumbotron"></section>
     <section>
         <ListCard />
         <div class="load">
@@ -39,7 +39,7 @@ export default {
 
 section {
     background-color: #1c1c1c;
-    min-height: 100px;
+    min-height: 700px;
     width: 100%;
     color: white;
     position: relative;
@@ -54,7 +54,13 @@ section {
             color: white;
             font-weight: bold;
             padding: 10px 30px;
-            margin-bottom: 30px;
+
+            &:hover {
+                background-color: transparent;
+                border: 3px solid $primary-color;
+                padding: 8px 30px;
+
+            }
         }
     }
 

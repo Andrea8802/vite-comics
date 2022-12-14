@@ -85,7 +85,7 @@ export default {
                 <div class="list">
                     DC COMICS
                     <ul>
-                        <li v-for="(link, a) in linkFooter.dcComics" :key="a">
+                        <li v-for="(link, index) in linkFooter.dcComics" :key="index">
                             <a href="#">
                                 {{ link }}
                             </a>
@@ -93,7 +93,7 @@ export default {
                     </ul>
                     SHOP
                     <ul>
-                        <li v-for="(link, b) in linkFooter.shop" :key="b">
+                        <li v-for="(link, index) in linkFooter.shop" :key="index">
                             <a href="#">
                                 {{ link }}
                             </a>
@@ -104,7 +104,7 @@ export default {
                 <div class="list">
                     DC
                     <ul>
-                        <li v-for="(link, c) in linkFooter.dC" :key="c">
+                        <li v-for="(link, index) in linkFooter.dC" :key="index">
                             <a href="#">
                                 {{ link }}
                             </a>
@@ -115,7 +115,7 @@ export default {
                 <div class="list">
                     SITES
                     <ul>
-                        <li v-for="(link, d) in linkFooter.sites" :key="d">
+                        <li v-for="(link, index) in linkFooter.sites" :key="index">
                             <a href="#">
                                 {{ link }}
                             </a>
@@ -138,7 +138,7 @@ export default {
 
             <div class="follow">
                 <span>FOLLOW US</span>
-                <img v-for="(icon, i) in iconsSocial" :src="'./src/assets/img/footer-' + icon.name" :key="i">
+                <img v-for="(icon, index) in iconsSocial" :src="'./src/assets/img/footer-' + icon.name" :key="index">
             </div>
         </section>
     </footer>

@@ -17,7 +17,7 @@ export default {
 
 <template>
     <div class="list">
-        <Card v-for="(card, indice) in cards" :key="indice" :details="card" />
+        <Card v-for="(card, index) in cards" :key="index" :details="card" />
     </div>
 
 </template>
@@ -28,7 +28,7 @@ export default {
 .list {
     width: 75%;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 40px 0;
     @include d-flex(center);
     flex-wrap: wrap;
     row-gap: 30px;
